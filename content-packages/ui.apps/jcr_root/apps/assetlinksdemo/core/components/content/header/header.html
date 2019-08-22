@@ -1,0 +1,29 @@
+<header data-sly-use.teaser="com.adobe.cq.wcm.core.components.models.Teaser"     
+     data-sly-use.imageTemplate="image.html"
+     data-sly-use.titleTemplate="title.html"
+     data-sly-use.descriptionTemplate="description.html"
+     data-sly-use.actionsTemplate="actions.html"
+     data-sly-test.hasContent="${teaser.mediaValid || teaser.title || teaser.description || teaser.actions.size > 0}"
+     class="masthead ${!wcmmode.disabled && teaser.mediaValid ? 'cq-dd-image' : ''}">
+
+  <!--/* Use context='unsafe' to support responsive markup with picture/source etc.
+          which is otherwise filter out by default AEM XSS settings */-->
+  ${teaser.mediaMarkup @ context='unsafe'}
+
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">${teaser.description @ context='html'}</div>
+      <div class="intro-heading text-uppercase">${teaser.title || currentPage.pageTtile || currentPage.name}</div>
+      
+      <sly data-sly-test="${teaser.actionsEnabled}" data-sly-list.action="${teaser.actions}">
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+            data-sly-attribute="${action.linkAttributes}" data-sly-unwrap="${!action.linkValid}">${action.title}</a>
+      </sly>
+
+    </div>
+      
+  </div>
+
+</header>
+<sly data-sly-use.template="wcm-io/handler/media/components/placeholder/mediaPlaceholder.html"
+    data-sly-call="${template.placeholder @ isEmpty=!hasContent, media=teaser.mediaObject, classAppend='cq-dd-image'}"></sly>

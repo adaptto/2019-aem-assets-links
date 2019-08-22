@@ -1,0 +1,29 @@
+<section class="page-section" id="${resource.name}">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">${properties.jcr:title}</h2>
+        <h3 class="section-subheading text-muted">${properties.subHeading}</h3>
+      </div>
+    </div>
+
+    <!--/* include services items as parsys */-->
+    <!--/* copy markup from /libs/wcm/foundation/components/responsivegrid/responsivegrid.html to adapt CSS classes in wrapper DIV and new area DIV */-->
+    <sly data-sly-test="${wcmmode.edit}" data-sly-use.allowed="com.day.cq.wcm.foundation.model.AllowedComponents"></sly>
+    <div data-sly-use.api="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid" class="row text-center ${api.cssClass} ${allowed.cssClass}">
+        <sly data-sly-test.isAllowedApplicable="${allowed.isApplicable}"
+             data-sly-test="${isAllowedApplicable}"
+             data-sly-use.allowedTemplate="/libs/wcm/foundation/components/parsys/allowedcomponents/allowedcomponents-tpl.html"
+             data-sly-call="${allowedTemplate.allowedcomponents @ title=allowed.title, resourcesMap=allowed.resourcesMap,
+                placeholderCss=allowed.placeholderCssClass,
+                placeholderType=allowed.placeholderResourceType}"></sly>
+        <sly data-sly-test="${!isAllowedApplicable}"
+             data-sly-repeat.child="${api.paragraphs}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType, decoration='true', cssClassName=child.cssClass}"></sly>
+        <sly data-sly-test="${!isAllowedApplicable && wcmmode.edit}"
+             data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*', decorationTagName='div', cssClassName='new section col-md-4'}"/>
+    </div>
+
+  </div>
+</section>

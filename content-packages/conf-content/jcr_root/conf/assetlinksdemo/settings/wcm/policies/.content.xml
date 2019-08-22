@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:wcmio="http://wcm.io/ns" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <root-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Root Container"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/assetlinksdemo/core/components/content/header,/apps/assetlinksdemo/core/components/content/title]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </root-container>
+                    <content-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Container"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/assetlinksdemo/core/components/content/portfolio,/apps/assetlinksdemo/core/components/content/portfolioItem,/apps/assetlinksdemo/core/components/content/services]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured"/>
+                        </cq:authoring>
+                    </content-container>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <assetlinksdemo jcr:primaryType="nt:unstructured">
+        <core jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <content jcr:primaryType="nt:unstructured">
+                    <services jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/assetlinksdemo/core/components/content/servicesItem,/apps/assetlinksdemo/core/components/content/servicesLinkList]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Background"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="bg-light"
+                                            cq:styleId="1563879048542"
+                                            cq:styleLabel="Light"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="bg-dark"
+                                            cq:styleId="1563879049591"
+                                            cq:styleLabel="Dark"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </default>
+                    </services>
+                    <servicesLinkList jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="/apps/assetlinksdemo/core/components/content/servicesLinkListItem">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </default>
+                    </servicesLinkList>
+                    <portfolio jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="/apps/assetlinksdemo/core/components/content/portfolioItem">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Background"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="bg-light"
+                                            cq:styleId="1563879173260"
+                                            cq:styleLabel="Light"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="bg-dark"
+                                            cq:styleId="1563879174202"
+                                            cq:styleLabel="Dark"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </default>
+                    </portfolio>
+                    <portfolioItem jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            wcmio:mediaCropAuto="{Boolean}true"
+                            wcmio:mediaFormats="square"
+                            wcmio:mediaResponsiveType="none"
+                            actionsDisabled="true"
+                            imageLinkHidden="true"
+                            titleLinkHidden="true"
+                            titleType="h4">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                        </default>
+                        <responsive-with-different-ratios
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Responsive with different Ratios"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            wcmio:mediaCropAuto="{Boolean}true"
+                            wcmio:mediaFormats="square"
+                            wcmio:mediaResponsiveType="pictureSources"
+                            actionsDisabled="true"
+                            imageLinkHidden="true"
+                            titleLinkHidden="true"
+                            titleType="h4">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaRepsonsivePictureSources jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    media="(min-width: 1200px)"
+                                    mediaFormat="extra_wide"
+                                    widths="200,350,700?"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    media="(min-width: 768px)"
+                                    mediaFormat="landscape"
+                                    widths="200,350,700?"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    mediaFormat="square"
+                                    widths="200,350,700?"/>
+                            </wcmio:mediaRepsonsivePictureSources>
+                        </responsive-with-different-ratios>
+                    </portfolioItem>
+                </content>
+            </components>
+        </core>
+    </assetlinksdemo>
+</jcr:root>

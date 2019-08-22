@@ -1,0 +1,9 @@
+<span class="fa-stack fa-4x">
+  <i class="fas fa-circle fa-stack-2x text-primary"></i>
+  <i class="fas ${properties.icon} fa-stack-1x fa-inverse"></i>
+</span>
+<h4 class="service-heading">${properties.jcr:title}</h4>
+<div data-sly-use.richtext="io.wcm.handler.richtext.ui.ResourceRichText"
+    class="richtext">
+    ${richtext.markup @ context='html'}
+</div>

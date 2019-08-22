@@ -1,0 +1,33 @@
+# AEM configuration for local development environment
+
+nodes:
+
+- node: aem-author
+  roles:
+  - role: assetlinksdemo-aem-cms
+    variant: aem-author
+  config:
+    replication.author.publishTargets:
+    - name: publish1
+      url: http://localhost:4503
+      transportUser: admin
+      transportPassword: admin
+
+- node: aem-publish
+  roles:
+  - role: assetlinksdemo-aem-cms
+    variant: aem-publish
+
+config:
+  contentPackage.group: adaptto-demo
+  app:
+    confContent: true
+    sampleContent: true
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: info
+
+  quickstart:
+    # Enable Apache Sling DavEx Servlet to be able to use CRXDE Lite
+    enableDavEx: true

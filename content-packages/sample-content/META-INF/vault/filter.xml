@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/dam/assetlinksdemo">
+        <!-- Exclude folder thumbnails - they will be generated automatically -->
+        <exclude pattern="^.*/jcr:content/folderThumbnail(/.*)?$"/>
+    </filter>
+    <filter root="/content/assetlinksdemo"/>
+</workspaceFilter>

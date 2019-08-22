@@ -1,0 +1,23 @@
+<sly data-sly-use.teaser="com.adobe.cq.wcm.core.components.models.Teaser"     
+     data-sly-test.hasContent="${teaser.mediaValid && teaser.title}"
+     class="${!wcmmode.disabled && teaser.mediaValid ? 'cq-dd-image' : ''}">
+  
+  <a class="portfolio-link" data-sly-attribute="${teaser.linkAttributes}" data-sly-unwrap="${!teaser.linkValid}">
+    <div class="portfolio-hover" data-sly-test="${teaser.linkValid}">
+      <div class="portfolio-hover-content">
+        <i class="fas fa-plus fa-3x"></i>
+      </div>
+    </div>
+    <!--/* Use context='unsafe' to support responsive markup with picture/source etc.
+        which is otherwise filter out by default AEM XSS settings */-->
+    ${teaser.mediaMarkup @ context='unsafe'}
+  </a>
+  <div class="portfolio-caption">
+    <h4>${teaser.title}</h4>
+    <p class="text-muted" data-sly-test="teaser.description">${teaser.description}</p>
+  </div>
+
+</sly>
+
+<sly data-sly-use.template="wcm-io/handler/media/components/placeholder/mediaPlaceholder.html"
+    data-sly-call="${template.placeholder @ isEmpty=!hasContent, media=teaser.mediaObject, classAppend='cq-dd-image'}"></sly>

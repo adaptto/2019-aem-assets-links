@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:template="/conf/assetlinksdemo/settings/wcm/templates/homepage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
+        sling:resourceType="assetlinksdemo/core/components/global/page"
+        navTitle="HOME"
+        pageTitle="assetlinksdemo Sample Site">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:description="&lt;p&gt;Welcome To Our Studio!&lt;/p&gt;&#xD;&#xA;"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hello adaptTo() 2019"
+                sling:resourceType="assetlinksdemo/core/components/content/header"
+                actionsEnabled="true"
+                descriptionFromPage="false"
+                fileReference="/content/dam/assetlinksdemo/header/header-bg.jpg"
+                linkType="internal"
+                linkWindowTarget="_self"
+                textIsRich="true"
+                titleFromPage="false">
+                <actions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        linkExternalRef="#services"
+                        linkType="external"
+                        linkWindowTarget="_self"
+                        text="Tell me more"/>
+                </actions>
+            </header>
+            <content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <portfolio
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Portfolio"
+                    sling:resourceType="assetlinksdemo/core/components/content/portfolio"
+                    subHeading="Lorem ipsum dolor sit amet consectetur.">
+                    <portfolioitem
+                        jcr:description="Illustration"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Threads"
+                        sling:resourceType="assetlinksdemo/core/components/content/portfolioItem"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/assetlinksdemo/portfolio/01-full.jpg"
+                        linkExternalRef="#services"
+                        linkType="external"
+                        linkWindowTarget="_self"
+                        textIsRich="true"
+                        titleFromPage="false"/>
+                    <portfolioitem_449693366
+                        jcr:description="Graphic Design"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Explore"
+                        sling:resourceType="assetlinksdemo/core/components/content/portfolioItem"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/assetlinksdemo/portfolio/02-full.jpg"
+                        linkExternalRef="#portfolio"
+                        linkType="external"
+                        linkWindowTarget="_self"
+                        textIsRich="true"
+                        titleFromPage="false"/>
+                    <portfolioitem_1051571078
+                        jcr:description="Identity"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Finish"
+                        sling:resourceType="assetlinksdemo/core/components/content/portfolioItem"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/assetlinksdemo/portfolio/03-full.jpg"
+                        linkExternalRef="https://adapt.to"
+                        linkType="external"
+                        linkWindowTarget="_self"
+                        textIsRich="true"
+                        titleFromPage="false"/>
+                </portfolio>
+                <services
+                    cq:styleIds="[1563879048542]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Services"
+                    sling:resourceType="assetlinksdemo/core/components/content/services"
+                    subHeading="Lorem ipsum dolor sit amet consectetur.">
+                    <servicesitem
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Service Item"
+                        sling:resourceType="assetlinksdemo/core/components/content/servicesItem"
+                        icon="fa-shopping-cart"
+                        text="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.&lt;/p&gt;&#xA;"
+                        textIsRich="true"/>
+                    <servicesitem_95831011
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Responsive Design"
+                        sling:resourceType="assetlinksdemo/core/components/content/servicesItem"
+                        icon="fa-laptop"
+                        text="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.&lt;/p&gt;&#xA;"
+                        textIsRich="true"/>
+                    <serviceslinklist
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Web Security"
+                        sling:resourceType="assetlinksdemo/core/components/content/servicesLinkList"
+                        icon="fa-lock">
+                        <serviceslinklistitem
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="assetlinksdemo/core/components/content/servicesLinkListItem"
+                            linkExternalRef="https://adapt.to"
+                            linkTitle="Lorem ipsum dolor"
+                            linkType="external"
+                            linkWindowTarget="_blank"/>
+                        <serviceslinklistitem_1503996843
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="assetlinksdemo/core/components/content/servicesLinkListItem"
+                            linkExternalRef="https://adapt.to"
+                            linkTitle="Minima maxime quam"
+                            linkType="external"
+                            linkWindowTarget="_blank"/>
+                        <serviceslinklistitem_470254471
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="assetlinksdemo/core/components/content/servicesLinkListItem"
+                            linkExternalRef="https://adapt.to"
+                            linkTitle="Dicta impedit"
+                            linkType="external"
+                            linkWindowTarget="_blank"/>
+                    </serviceslinklist>
+                </services>
+            </content>
+        </root>
+    </jcr:content>
+    <tools/>
+    <portfolio/>
+    <services/>
+</jcr:root>

@@ -1,0 +1,52 @@
+{{!--
+  Create system user "assetlinksdemoDamSystemUser" and grant read/write access to everything below /content/dam.
+--}}
+{
+  "jcr:primaryType": "rep:root",
+
+  "content": {
+    "jcr:primaryType": "sling:OrderedFolder",
+
+    "dam": {
+      "jcr:primaryType": "sling:OrderedFolder",
+
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL",
+        "allow-assetlinksdemoDamSystemUser": {
+          "jcr:primaryType": "rep:GrantACE",
+          "rep:principalName": "assetlinksdemoDamSystemUser",
+          "rep:privileges": [ "jcr:read", "rep:write" ]
+        }
+      }
+
+    }
+  },
+
+  "home": {
+    "jcr:primaryType": "rep:AuthorizableFolder",
+
+    "users": {
+      "jcr:primaryType": "rep:AuthorizableFolder",
+
+      "system": {
+        "jcr:primaryType": "rep:AuthorizableFolder",
+
+        "assetlinksdemo": {
+          "jcr:primaryType": "rep:AuthorizableFolder",
+
+          "assetlinksdemoDamSystemUser": {
+            "jcr:primaryType": "rep:SystemUser",
+            "jcr:uuid": "{{oakAuthorizableUuid "assetlinksdemoDamSystemUser"}}",
+            "rep:authorizableId": "assetlinksdemoDamSystemUser",
+            "rep:principalName": "assetlinksdemoDamSystemUser"
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

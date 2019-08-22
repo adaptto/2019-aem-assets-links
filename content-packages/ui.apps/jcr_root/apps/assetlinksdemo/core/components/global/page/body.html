@@ -1,0 +1,13 @@
+<div id="page-top">
+
+  <!--/* Navigation */-->  
+  <sly data-sly-resource="${'.' @ resourceType='assetlinksdemo/core/components/structure/navigation'}"/>
+
+  <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+       data-sly-repeat.child="${templatedContainer.structureResources}"
+       data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"></sly>
+
+  <!--/* Footer */-->  
+  <sly data-sly-resource="${'.' @ resourceType='assetlinksdemo/core/components/structure/footer'}"/>
+
+</div>
