@@ -78,6 +78,13 @@ files:
   dir: packages
   condition: ${app.sampleContent}
 
+# Core Component Libraries (examples)
+- url: mvn:com.adobe.cq/core.wcm.components.examples//zip
+  dir: packages
+- url: mvn:io.wcm.samples/io.wcm.wcm.core.components.examples//zip
+  dir: packages
+
+
 
 # Defines configuration parameters and default values
 config:

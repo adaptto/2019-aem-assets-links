@@ -56,6 +56,20 @@
       <scope>compile</scope>
     </dependency>
 
+    <!-- Component libraries (examples) -->
+    <dependency>
+      <groupId>com.adobe.cq</groupId>
+      <artifactId>core.wcm.components.examples</artifactId>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm.samples</groupId>
+      <artifactId>io.wcm.wcm.core.components.examples</artifactId>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
