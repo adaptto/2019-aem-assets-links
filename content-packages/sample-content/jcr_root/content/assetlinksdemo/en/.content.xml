@@ -48,8 +48,9 @@
                         sling:resourceType="assetlinksdemo/core/components/content/portfolioItem"
                         descriptionFromPage="false"
                         fileReference="/content/dam/assetlinksdemo/portfolio/01-full.jpg"
+                        linkContentRef="/content/assetlinksdemo/en/portfolio/portfolio-1"
                         linkExternalRef="#services"
-                        linkType="external"
+                        linkType="internal"
                         linkWindowTarget="_self"
                         textIsRich="true"
                         titleFromPage="false"/>
@@ -60,8 +61,9 @@
                         sling:resourceType="assetlinksdemo/core/components/content/portfolioItem"
                         descriptionFromPage="false"
                         fileReference="/content/dam/assetlinksdemo/portfolio/02-full.jpg"
+                        linkContentRef="/content/assetlinksdemo/en/portfolio/portfolio-2"
                         linkExternalRef="#portfolio"
-                        linkType="external"
+                        linkType="internal"
                         linkWindowTarget="_self"
                         textIsRich="true"
                         titleFromPage="false"/>
