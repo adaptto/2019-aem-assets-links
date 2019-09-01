@@ -28,10 +28,6 @@
                                     cq:policy="assetlinksdemo/core/components/content/servicesLinkList/default"
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="wcm/core/components/policies/mapping"/>
-                                <portfolioItem
-                                    cq:policy="assetlinksdemo/core/components/content/portfolioItem/default"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/core/components/policies/mapping"/>
                             </content>
                         </components>
                     </core>
