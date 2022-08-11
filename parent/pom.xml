@@ -28,7 +28,7 @@
     <eclipse.settings.nullanalysis>enabled</eclipse.settings.nullanalysis>
 
     <!-- Versions -->
-    <core.wcm.components.version>2.5.0</core.wcm.components.version>
+    <core.wcm.components.version>2.20.8</core.wcm.components.version>
 
   </properties>
 
